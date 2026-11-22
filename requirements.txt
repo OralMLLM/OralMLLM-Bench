@@ -1,0 +1,6 @@
+# API-based models: Python >= 3.10 standard library only.
+# Local inference with LLaVA-1.6-7B:
+torch
+transformers>=4.45
+accelerate
+pillow

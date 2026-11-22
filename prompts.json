@@ -1,0 +1,249 @@
+{
+  "source": "Wang et al., J Dent 2026;107174, doi:10.1016/j.jdent.2026.107174",
+  "system_prompt": "You are a dental radiologist and expert in dental diagnosis. Please answer the question briefly and directly according to the image.",
+  "tasks": [
+    {
+      "task_id": "pa_caries_detection",
+      "task": "Caries Detection",
+      "modality": "Periapical",
+      "cognitive_category": "Perception",
+      "task_type": "Binary classification",
+      "assessment_unit": "Per tooth",
+      "prompt": "Is dental caries present in the image? Please answer only 'Yes' or 'No'."
+    },
+    {
+      "task_id": "pa_tooth_defect_detection",
+      "task": "Tooth Defect Detection",
+      "modality": "Periapical",
+      "cognitive_category": "Perception",
+      "task_type": "Binary classification",
+      "assessment_unit": "Per tooth",
+      "prompt": "Is there any obvious tooth defect or structural loss in the image? Please answer only 'Yes' or 'No'."
+    },
+    {
+      "task_id": "pa_restoration_detection",
+      "task": "Restoration Detection",
+      "modality": "Periapical",
+      "cognitive_category": "Perception",
+      "task_type": "Binary classification",
+      "assessment_unit": "Per tooth",
+      "prompt": "Is a coronal restoration present in the image? Please answer only 'Yes' or 'No'."
+    },
+    {
+      "task_id": "pa_root_filling_detection",
+      "task": "Root Filling Detection",
+      "modality": "Periapical",
+      "cognitive_category": "Perception",
+      "task_type": "Binary classification",
+      "assessment_unit": "Per tooth",
+      "prompt": "Is a root filling present in the image? Please answer only 'Yes' or 'No'."
+    },
+    {
+      "task_id": "pa_periapical_lesion_detection",
+      "task": "Periapical Lesion Detection",
+      "modality": "Periapical",
+      "cognitive_category": "Perception",
+      "task_type": "Binary classification",
+      "assessment_unit": "Per tooth",
+      "prompt": "Is a periapical lesion present in the image? Please answer only 'Yes' or 'No'."
+    },
+    {
+      "task_id": "pa_tooth_lesion_localization",
+      "task": "Tooth & Lesion Localization",
+      "modality": "Periapical",
+      "cognitive_category": "Comprehension",
+      "task_type": "Structured prediction",
+      "assessment_unit": "Per tooth",
+      "prompt": "Identify the teeth with abnormalities in the image and use FDI notation to specify each affected tooth and its corresponding abnormality type. Report the affected teeth and abnormalities in a structured format. If no abnormal tooth is identified, answer 'None'."
+    },
+    {
+      "task_id": "pa_deep_caries_assessment",
+      "task": "Deep Caries Assessment",
+      "modality": "Periapical",
+      "cognitive_category": "Comprehension",
+      "task_type": "Binary classification",
+      "assessment_unit": "Per tooth",
+      "prompt": "Does any tooth show deep caries approaching or involving the pulp in the image? Please answer only 'Yes' or 'No'."
+    },
+    {
+      "task_id": "pa_root_filling_quality",
+      "task": "Root Filling Quality Assessment",
+      "modality": "Periapical",
+      "cognitive_category": "Comprehension",
+      "task_type": "Binary classification",
+      "assessment_unit": "Per tooth",
+      "prompt": "Does any tooth exhibit inadequate root canal filling quality in the image? Please answer only 'Yes' or 'No'."
+    },
+    {
+      "task_id": "pa_caries_progression_risk",
+      "task": "Caries Progression Risk Prediction",
+      "modality": "Periapical",
+      "cognitive_category": "Prediction",
+      "task_type": "Structured prediction with explanation",
+      "assessment_unit": "Per tooth",
+      "prompt": "Based on the image, are there any untreated deep caries lesions indicating potential or manifest pulpal/periapical involvement? First answer 'Yes' or 'No'. If 'Yes', specify the affected teeth using FDI notation and briefly provide the radiographic rationale. If 'No', report the affected teeth as 'None'."
+    },
+    {
+      "task_id": "pa_poor_root_filling_risk",
+      "task": "Poor Root Filling Risk Prediction",
+      "modality": "Periapical",
+      "cognitive_category": "Prediction",
+      "task_type": "Structured prediction with explanation",
+      "assessment_unit": "Per tooth",
+      "prompt": "Based on the image, are there any teeth with inadequate root canal fillings indicating a risk of future pulpal/periapical disease? First answer 'Yes' or 'No'. If 'Yes', specify the affected teeth using FDI notation and briefly provide the radiographic rationale. If 'No', report the affected teeth as 'None'."
+    },
+    {
+      "task_id": "pa_tooth_survival_prognosis",
+      "task": "Tooth Survival Prognosis",
+      "modality": "Periapical",
+      "cognitive_category": "Prediction",
+      "task_type": "Structured prediction with explanation",
+      "assessment_unit": "Per tooth",
+      "prompt": "Based on the image, are there any severely damaged crowns or residual roots indicating a high risk of fracture, mobility, or eventual extraction? First answer 'Yes' or 'No'. If 'Yes', specify the affected teeth using FDI notation and briefly provide the radiographic rationale. If 'No', report the affected teeth as 'None'."
+    },
+    {
+      "task_id": "pa_treatment_recommendation",
+      "task": "Treatment Recommendation",
+      "modality": "Periapical",
+      "cognitive_category": "Decision-making",
+      "task_type": "Structured prediction with explanation",
+      "assessment_unit": "Per tooth",
+      "prompt": "Based on the image, are there any teeth requiring the corresponding restorative or endodontic treatment? First answer 'Yes' or 'No'. If 'Yes', specify the affected teeth using FDI notation, the corresponding treatment type (the corresponding restorative or endodontic treatment), and briefly provide the radiographic rationale. If 'No', report the affected teeth as 'None'."
+    },
+    {
+      "task_id": "pa_extraction_recommendation",
+      "task": "Extraction Recommendation",
+      "modality": "Periapical",
+      "cognitive_category": "Decision-making",
+      "task_type": "Structured prediction with explanation",
+      "assessment_unit": "Per tooth",
+      "prompt": "Based on the image, are there any teeth recommended for extraction? First answer 'Yes' or 'No'. If 'Yes', specify the affected teeth using FDI notation and briefly provide the radiographic rationale. If 'No', report the affected teeth as 'None'."
+    },
+    {
+      "task_id": "pan_third_molar_detection",
+      "task": "Third Molar Detection",
+      "modality": "Panoramic",
+      "cognitive_category": "Perception",
+      "task_type": "Binary classification",
+      "assessment_unit": "Per quadrant",
+      "prompt": "Are there any third molars or developing third-molar tooth germs present in the image? Report the four quadrants strictly in the following order: right maxilla, left maxilla, left mandible, right mandible. For each quadrant, answer 'Yes' or 'No', separated by commas. Example: 'No, Yes, No, No'."
+    },
+    {
+      "task_id": "pan_jaw_lesion_detection",
+      "task": "Jaw Lesion Detection",
+      "modality": "Panoramic",
+      "cognitive_category": "Perception",
+      "task_type": "Binary classification",
+      "assessment_unit": "Per quadrant",
+      "prompt": "Are there any abnormal radiolucent jaw lesions present in the image? Report the four quadrants strictly in the following order: right maxilla, left maxilla, left mandible, right mandible. For each quadrant, answer 'Yes' or 'No', separated by commas. Example: 'No, Yes, No, No'."
+    },
+    {
+      "task_id": "pan_bone_loss_detection",
+      "task": "Alveolar Bone Loss Detection",
+      "modality": "Panoramic",
+      "cognitive_category": "Perception",
+      "task_type": "Binary classification",
+      "assessment_unit": "Per sextant",
+      "prompt": "Is there significant alveolar bone loss present in the image? Report the six regions strictly in the following order: maxillary anterior, mandibular anterior, right maxillary posterior, left maxillary posterior, left mandibular posterior, right mandibular posterior. For each region, answer 'Yes' or 'No', separated by commas. Example: 'No, Yes, No, No, Yes, No'."
+    },
+    {
+      "task_id": "pan_embedded_tooth_detection",
+      "task": "Embedded Tooth Detection",
+      "modality": "Panoramic",
+      "cognitive_category": "Perception",
+      "task_type": "Binary classification",
+      "assessment_unit": "Per quadrant",
+      "prompt": "Are there any embedded non-third-molar teeth present in the image? Report the four quadrants strictly in the following order: right maxilla, left maxilla, left mandible, right mandible. For each quadrant, answer 'Yes' or 'No', separated by commas. Example: 'No, Yes, No, No'."
+    },
+    {
+      "task_id": "pan_third_molar_relation",
+      "task": "Third Molar Relation Assessment",
+      "modality": "Panoramic",
+      "cognitive_category": "Comprehension",
+      "task_type": "Binary classification",
+      "assessment_unit": "Per quadrant",
+      "prompt": "Are there any impacted third molars exerting pressure on or showing clear contact with the distal surface of the adjacent second molar in the image? Report the four quadrants strictly in the following order: right maxilla, left maxilla, left mandible, right mandible. For each quadrant, answer 'Yes' or 'No', separated by commas. Example: 'No, Yes, No, No'."
+    },
+    {
+      "task_id": "pan_bone_loss_grading",
+      "task": "Alveolar Bone Loss Grading",
+      "modality": "Panoramic",
+      "cognitive_category": "Comprehension",
+      "task_type": "Binary classification",
+      "assessment_unit": "Per sextant",
+      "prompt": "Is there severe alveolar bone loss (>50% of root length) present in the image? Report the six regions strictly in the following order: maxillary anterior, mandibular anterior, right maxillary posterior, left maxillary posterior, left mandibular posterior, right mandibular posterior. For each region, answer 'Yes' or 'No', separated by commas. Example: 'No, Yes, No, No, Yes, No'."
+    },
+    {
+      "task_id": "pan_impacted_molar_risk",
+      "task": "Impacted Molar Risk Prediction",
+      "modality": "Panoramic",
+      "cognitive_category": "Prediction",
+      "task_type": "Structured prediction with explanation",
+      "assessment_unit": "Per quadrant",
+      "prompt": "Based on the panoramic radiograph, determine for each quadrant whether there is an impacted third molar that may pose a pathological risk to the adjacent tooth, such as caries or root resorption. Report the quadrants strictly in the following order: right maxilla, left maxilla, left mandible, right mandible, and provide a 'Yes' or 'No' judgment for each quadrant. For quadrants judged 'Yes', briefly provide the radiographic rationale; no explanation is required for quadrants judged 'No'."
+    },
+    {
+      "task_id": "pan_bone_loss_related_risk",
+      "task": "Bone Loss–Related Risk Prediction",
+      "modality": "Panoramic",
+      "cognitive_category": "Prediction",
+      "task_type": "Structured prediction with explanation",
+      "assessment_unit": "Per sextant",
+      "prompt": "Based on the panoramic radiograph, determine for each of the six regions whether alveolar bone loss is present and indicates a risk of future tooth mobility or tooth loss. Report the regions strictly in the following order: maxillary anterior, mandibular anterior, right maxillary posterior, left maxillary posterior, left mandibular posterior, right mandibular posterior, and provide a 'Yes' or 'No' judgment for each region. For regions judged 'Yes', briefly provide the radiographic rationale; no explanation is required for regions judged 'No'."
+    },
+    {
+      "task_id": "pan_third_molar_extraction",
+      "task": "Third Molar Extraction Recommendation",
+      "modality": "Panoramic",
+      "cognitive_category": "Decision-making",
+      "task_type": "Structured prediction with explanation",
+      "assessment_unit": "Per quadrant",
+      "prompt": "Based on the panoramic radiograph, determine for each quadrant whether there is an impacted third molar recommended for extraction. Report the quadrants strictly in the following order: right maxilla, left maxilla, left mandible, right mandible, and provide a 'Yes' or 'No' judgment for each quadrant. For quadrants judged 'Yes', briefly provide the radiographic rationale; no explanation is required for quadrants judged 'No'."
+    },
+    {
+      "task_id": "pan_cbct_referral",
+      "task": "CBCT Referral Recommendation",
+      "modality": "Panoramic",
+      "cognitive_category": "Decision-making",
+      "task_type": "Structured prediction with explanation",
+      "assessment_unit": "Per quadrant",
+      "prompt": "Based on the panoramic radiograph, determine for each quadrant whether further CBCT examination is indicated. Report the quadrants strictly in the following order: right maxilla, left maxilla, left mandible, right mandible, and provide a 'Yes' or 'No' judgment for each quadrant. For quadrants judged 'Yes', briefly explain why the two-dimensional image is insufficient and provide the radiographic rationale for further three-dimensional imaging; no explanation is required for quadrants judged 'No'."
+    },
+    {
+      "task_id": "ceph_cvm_morphology",
+      "task": "Cervical Vertebra Morphology Recognition",
+      "modality": "Lateral cephalometric",
+      "cognitive_category": "Perception",
+      "task_type": "Structured prediction",
+      "assessment_unit": "Per image",
+      "prompt": "Evaluate the morphology of C2-C4 on the lateral cephalometric radiograph. Determine whether concavity is present at the inferior borders of C2, C3, and C4, and describe the body shapes of C3 and C4. Report the following five components in a fixed order: C2 inferior-border concavity, C3 inferior-border concavity, C4 inferior-border concavity, C3 body shape, C4 body shape."
+    },
+    {
+      "task_id": "ceph_cvm_staging",
+      "task": "Cervical Maturation Staging",
+      "modality": "Lateral cephalometric",
+      "cognitive_category": "Comprehension",
+      "task_type": "Structured prediction",
+      "assessment_unit": "Per image",
+      "prompt": "Based on the morphology of C2-C4 on the lateral cephalometric radiograph, determine the cervical vertebral maturation stage (CS I-VI) and briefly explain the morphological features supporting the stage, including inferior-border concavity and the body shapes of C3-C4."
+    },
+    {
+      "task_id": "ceph_growth_potential",
+      "task": "Growth Potential Prediction",
+      "modality": "Lateral cephalometric",
+      "cognitive_category": "Prediction",
+      "task_type": "Structured prediction with explanation",
+      "assessment_unit": "Per image",
+      "prompt": "Based on the visible cervical vertebral morphology and maturation features on the lateral cephalometric radiograph, determine whether the patient still has significant growth potential. First answer 'Yes' or 'No', and briefly provide the radiographic rationale supporting the judgment."
+    },
+    {
+      "task_id": "ceph_orthopedic_window",
+      "task": "Orthopedic Treatment Window Evaluation",
+      "modality": "Lateral cephalometric",
+      "cognitive_category": "Decision-making",
+      "task_type": "Structured prediction with explanation",
+      "assessment_unit": "Per image",
+      "prompt": "Based on the visible cervical vertebral morphology and maturation features on the lateral cephalometric radiograph, determine whether the patient is currently within a favorable window for orthopedic growth-modification treatment. First answer 'Yes' or 'No', and briefly provide the radiographic rationale supporting the judgment."
+    }
+  ]
+}
